@@ -10,6 +10,8 @@ This project utilizes the following components:
 - OpenFeign for inter-service communication
 - Distributed Tracing with Zipkin
 
+## Architecture Diagram
+
                             +-----------------+
                             |     Client      |
                             +--------+--------+
@@ -31,21 +33,21 @@ This project utilizes the following components:
             +------------------+       +------------------------+
             |   Config Server   |      |  Student Microservice  |
             +------------------+       +------------------------+
-                                                    |    ^
-                                                    |    |
-                                                    |    |  OpenFeign
-                                                    |    |
-                                                    v    |
-                                                +----------------------+
-                                                |  School Microservice |
-                                                +----------------------+
-                                                        ^
-                                                        |
-                                                        |  Zipkin for Distributed Tracing
-                                                        |
-                                                        v
-                                                +-----------------+
-                                                |      Zipkin      |
-                                                +-----------------+
+                                                |    ^
+                                                |    |
+                                                |    |  OpenFeign
+                                                |    |
+                                                v    |
+                                       +----------------------+
+                                       |  School Microservice |
+                                       +----------------------+
+                                                 ^
+                                                 |
+                                                 |  Zipkin for Distributed Tracing
+                                                 |
+                                                 v
+                                       +-----------------+
+                                       |      Zipkin      |
+                                       +-----------------+
 
 
